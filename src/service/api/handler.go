@@ -73,7 +73,7 @@ func (h *handler) process(c echo.Context) error {
 	//ctx := c.Request().Context()
 	key := c.Param("key")
 
-	return c.JSON(http.StatusOK, map[string]string{"key": key})
+	return c.JSON(http.StatusCreated, map[string]string{"key": key})
 }
 
 func (h *handler) jobs(c echo.Context) error {
